@@ -35,6 +35,11 @@ export default function Home() {
     marketplace: "magicEden",
   });
 
+  const { data: skeletonCrewSkulls } = useFloorPrice({
+    collection: "skeleton_crew_skulls",
+    marketplace: "magicEden",
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -74,6 +79,15 @@ export default function Home() {
           <Stat>
             <StatLabel>Magic Eden</StatLabel>
             <StatNumber>{danukiDojo}</StatNumber>
+          </Stat>
+        </StatGroup>
+      </Card>
+
+      <Card title="Skeleton Crew Skulls">
+        <StatGroup justifyContent="space-between">
+          <Stat>
+            <StatLabel>Magic Eden</StatLabel>
+            <StatNumber>{skeletonCrewSkulls}</StatNumber>
           </Stat>
         </StatGroup>
       </Card>
